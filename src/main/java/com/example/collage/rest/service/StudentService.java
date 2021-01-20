@@ -1,5 +1,6 @@
 package com.example.collage.rest.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +31,11 @@ public class StudentService implements IStudentService{
 	@Override
 	public Student update(Student student) {
 		return studentDao.save(student);
+	}
+
+	@Override
+	public List<Student> getAll() {
+		return studentDao.findAll();
 	}
 	
 	
